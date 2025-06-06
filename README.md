@@ -189,3 +189,18 @@ All error responses follow this format:
 
 /swagger-ui/index.html
 
+## Setup
+
+![mvn-clean-package](https://github.com/user-attachments/assets/e241b3bb-6ca1-4947-a1be-8d9c6e773ffe)
+
+![docker-build](https://github.com/user-attachments/assets/af7b2d54-0244-4295-85ae-17dfd1258512)
+
+![docker-run](https://github.com/user-attachments/assets/1539e349-b6f6-492e-8aea-c047204cd8d3)
+
+|mvn clean package -DskipTests|
+|docker build -t currency-converter .|
+|docker run -p 8080:8080 currency-converter|
+
+
+
+
