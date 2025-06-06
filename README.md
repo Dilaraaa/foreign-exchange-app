@@ -197,9 +197,9 @@ All error responses follow this format:
 
 ![docker-run](https://github.com/user-attachments/assets/1539e349-b6f6-492e-8aea-c047204cd8d3)
 
-|mvn clean package -DskipTests|
-|docker build -t currency-converter .|
-|docker run -p 8080:8080 currency-converter|
+- `mvn clean package -DskipTests`
+- `docker build -t currency-converter .`
+- `docker run -p 8080:8080 currency-converter`
 
 
 
