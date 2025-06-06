@@ -120,7 +120,6 @@ public class CurrencyConverterServiceImpl implements CurrencyConverterService {
             }
         }
 
-        // Write results to CSV
         try (
                 ByteArrayOutputStream out = new ByteArrayOutputStream();
                 Writer writer = new OutputStreamWriter(out)
