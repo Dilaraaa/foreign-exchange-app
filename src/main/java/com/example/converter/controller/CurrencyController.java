@@ -2,6 +2,7 @@ package com.example.converter.controller;
 
 import com.example.converter.dto.ConversionHistoryResponse;
 import com.example.converter.dto.ConversionResponse;
+import com.example.converter.exception.InvalidFileException;
 import com.example.converter.exception.RequiredFilterException;
 import com.example.converter.service.CurrencyConverterService;
 import com.example.converter.validation.ValidCurrency;
@@ -64,7 +65,7 @@ public class CurrencyController {
     @PostMapping("/bulk-conversion")
     public ResponseEntity<ByteArrayResource> bulkConvertCsv(@RequestParam("file") MultipartFile file) throws IOException {
         if (file.isEmpty() || !file.getOriginalFilename().endsWith(".csv")) {
-            throw new IllegalArgumentException("Invalid file. Please upload a non-empty CSV file.");
+            throw new InvalidFileException("CSV");
         }
 
         ByteArrayResource resource = new ByteArrayResource(currencyConverterService.convertCsvAndReturnResultFile(file));
